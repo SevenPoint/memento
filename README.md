@@ -20,4 +20,15 @@ La plataforma deberá tener algunos componentes que ayuden a los usuarios en su 
 
 ## Requerimientos específicos
 
+El sistema deberá garantizar, pero no por ello limitarse a las siguientes especificaciones, escritas en formato de historias de usuario:
+
+1. Como usuario quiero definir mi objetivo cuantificable o elegirlo de un conjunto predefinido para comenzar a registrar mis avances.
+2. Como usuario quiero volcar progresivamente mis avances respecto del objetivo según la unidad de tiempo establecida inicialmente.
+3. Como usuario quiero recibir insignias y reputación conforme me apegue al plan para evidenciar mi tesón y persistencia.
+4. Como usuario quiero compartir mis progresos en un perfil público y en comentarios en las principales redes sociales para recibir el apoyo de mis amigos.
+5. Como usuario quiero recibir y dar aliento de otros usuarios con objetivos similares para potenciar mi capacidad de cumplirlo.
+6. Como usuario quiero recibir sugerencias pre-establecidas por expertos y alertas conforme me desvíe recurrentemente del objetivo especificado.
+
+## Criterios de aceptación
+
 TBD
