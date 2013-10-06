@@ -2,7 +2,7 @@ package ar.edu.unlam
 
 class Usuario {
 
-	Integer idUsuario
+	String idUsuario
 	String nombre
 	String apellido
 	Integer edad
