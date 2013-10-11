@@ -13,3 +13,28 @@ div.panel-body a {text-decoration: none;}
 .progress-bar-success label { color: black; padding: 3px 15px}
 .progress-bar-success {text-align: right;}
 div.panel-default {font-size: 20px}
+img.img-rounded{height:40px; width:40px;float:left;}
+div.focusedInput{margin-left:15%;}
+
+/* index.html*/
+#titulo{
+margin-left: -20%;
+}
+
+/*.imageindex{
+margin-left: 25%;
+margin-top:-30%;
+}*/
+
+/*home.html*/
+#contenedor{
+margin-left:38%;
+}
+
+/*objetivos.html*/
+#float_right{
+float:right;
+margin-top: -23.5%;
+}
+
+#alerta{margin-left:15%;}
