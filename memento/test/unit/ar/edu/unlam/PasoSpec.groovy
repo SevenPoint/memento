@@ -8,6 +8,9 @@ import spock.lang.Specification
  */
 @TestFor(Paso)
 class PasoSpec extends Specification {
+	
+	def paso = new Paso();
+	
 
     def setup() {
     }
@@ -15,6 +18,23 @@ class PasoSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
+    void testContraintTitulo() {
+		paso.titulo = ""
+		assert !paso.validate()
     }
+	
+	void testContrainstFechaRecordatorio(){
+	
+		paso.fechaInicio = 15/02/2013
+		paso.fechaFin = 19/02/2013
+		paso.fechaRecordatorio = 20/02/2013
+		assert !paso.validate()
+	}
+	
+	void testConstrinstFechaFin(){
+		paso.fechaInicio = 01/04/2013
+		paso.fechaFin = 03/02/2013
+		assert !paso.validate()
+	}
+	
 }

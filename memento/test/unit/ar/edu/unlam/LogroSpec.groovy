@@ -8,6 +8,8 @@ import spock.lang.Specification
  */
 @TestFor(Logro)
 class LogroSpec extends Specification {
+	
+	def logro = new Logro()
 
     def setup() {
     }
@@ -15,6 +17,8 @@ class LogroSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
+    void testContraintTitulo() {
+		logro.nombre = "Nombre OK"
+		assert logro.validate()
     }
 }
