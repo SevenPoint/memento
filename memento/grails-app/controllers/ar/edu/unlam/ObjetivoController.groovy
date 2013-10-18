@@ -13,9 +13,7 @@ class ObjetivoController {
     def objetivos() { 
 			
 		
-		 def tmp = new Objetivo(idobjetivo: "1",titulo: "Objetivo 1"
-			,descripcion: "Descripcion 1" ,categoria: "Categoria 1", idusuario: "1"
-			,cantPasos: "Cantidad de Pasos 1", cantDias: "Cantidad de Dias 1",estado: "Estado 1")
+		 def tmp = new Objetivo().findAll()
 		 
 			
 		
