@@ -16,7 +16,5 @@ class Paso {
 		objetivo blank:false,size:1..256
 		idObjetivo blank:false
 		estado blank:false
-		fechaFin > fechaInicio
-		fechaRecordatorio blank:false,minvalue:fechaInicio,maxvalue:fechaFin
     }
 }
