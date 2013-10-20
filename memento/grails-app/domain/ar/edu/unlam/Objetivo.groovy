@@ -8,7 +8,7 @@ class Objetivo {
 	String categoria
 	String idusuario
 	Integer cantPasos
-	Integer cantDias
+	Integer cantDias //cambiar
 	String estado
     
 	static constraints = {

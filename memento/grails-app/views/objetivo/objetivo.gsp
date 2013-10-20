@@ -67,7 +67,7 @@
                   
                 </ul>
 		 <div class="panel-body">
-                    <a href="crearObjetivo.html"> <span class="glyphicon glyphicon-plus"></span> Agregar un objetivo nuevo</a>
+                    <a href="../objetivo/crearObjetivo"> <span class="glyphicon glyphicon-plus"></span> Agregar un objetivo nuevo</a>
                 </div>
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
