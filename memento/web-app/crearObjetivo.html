@@ -12,6 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="css/css.css" rel="stylesheet">
+	<script src="js/valida_fecha.js"></script>
+	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -64,17 +66,18 @@
                 <form action="configurarPasos.html" method="POST">
                 <ul class="nav nav-pills nav-stacked">
                     <li>Titulo</li>
-                    <input type="text" name="" id="input" class="form-control" value="" required="required" title="" ><br>
+                    <input type="text" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese un título" ><br>
                     <li>Descripción</li>
-                    <textarea type="text" name="" id="input" class="form-control" value="" required="required" title="" ></textarea><br>
+                    <textarea type="text" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese una descripción" ></textarea><br>
                     <li>Fecha de Inicio</li>
-                    <input type="date" name="" id="input" class="form-control" value="" required="required" title=""><br>
+                    <input type="date" name=""  id="input1" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de inicio"><br>
                     <li>Ficha de Fin</li>
-                    <input type="date" name="" id="input" class="form-control" value="" required="required" title=""><br>
-                    <li>Cantidad de Pasos</li>
-                    <input type="number" name="" id="input" class="form-control" value="" required="required" title="" >
+                    <input type="date" name=""  id="input2" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de fin"><br>
+                    <div id="contenedor"></div>
+					<li>Cantidad de Pasos</li>
+                    <input type="number" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese cantidad de pasos" >
                     <br>
-                    <input type="submit" value="Siguiente">
+                    <input type="submit" value="Siguiente" id="boton">
                 </ul>
 		</form>
         </div>
