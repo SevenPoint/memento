@@ -17,6 +17,17 @@ class ObjetivoController {
 		
 		render(view:"crearobjetivo", model:"")
 	}
+
+	def VerDetallesObjetivo() {
+		
+		def obj = params.objetivo.toInteger()
+		
+		def tem = new Paso().findAllWhere(idObjetivo : obj)
+		def tmp = new Objetivo().findAll()
+		def tmpobj = new Objetivo().findWhere(idobjetivo:obj)
+		def map = [ tmpp : tem , tmp :tmp , tmpo : tmpobj]
+		render(view:"VerDetallesObjetivo", model:map)
+	}
 	
 	def guardarObjetivo() {
 		
