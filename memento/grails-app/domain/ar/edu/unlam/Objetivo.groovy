@@ -2,7 +2,6 @@ package ar.edu.unlam
 
 class Objetivo {
 
-	Integer idobjetivo
 	String titulo
 	String descripcion
 	String categoria

@@ -35,11 +35,12 @@
   	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
   	            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                        <ul class="nav navbar-nav">
-                          <li class="active"><a href="objetivos.html">objetivos</a></li>
-                        </ul>
-  	                    <ul class="nav navbar-nav navbar-right">
-  	                        
+                        <ul class="nav nav-pills">
+                          <li><a href="objetivos.html">objetivos</a></li>
+                          <!--li><a href="#">logros</a></li-->
+                          <li><a href="amigos.html">amigos</a></li>                     
+  	                    
+						<ul class="nav navbar-nav navbar-right">                        
   	                        <li class="dropdown" action="">
   	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -49,6 +50,7 @@
   	                            </ul>
   	                        </li>
   	                    </ul>
+						</ul>
   	                </div><!-- /.navbar-collapse -->
   		</div>            
   	</nav>
@@ -62,12 +64,14 @@
             </div>
                 <ul class="nav nav-pills nav-stacked">
                 	<g:each var="obj" in="${tmp}">
-					    <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </a></li>
+					    <li class="active">
+					    <g:link action="VerDetallesObjetivo" params="[obj:obj.id]">
+			<span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </g:link></li>
 					</g:each>
                   
                 </ul>
 		 <div class="panel-body">
-                    <a href="../objetivo/crearObjetivo"> <span class="glyphicon glyphicon-plus"></span> Agregar un objetivo nuevo</a>
+                    <a class="link" href="../objetivo/crearObjetivo"> <span class="glyphicon glyphicon-plus"></span> Agregar un objetivo nuevo</a>
                 </div>
         </div>
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">

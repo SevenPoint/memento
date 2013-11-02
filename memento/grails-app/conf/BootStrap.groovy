@@ -1,4 +1,5 @@
 import ar.edu.unlam.Objetivo
+import ar.edu.unlam.Paso
 
 class BootStrap {
 	
@@ -25,4 +26,9 @@ class BootStrap {
 			,descripcion: "Correr 40KM" ,categoria: "Correr 40KM", idusuario: "Diegarcho"
 				,cantPasos: 5, cantDias: 5,estado: "En Progreso").save()
 	}
+	
+	
+	
+	
+	
 }
