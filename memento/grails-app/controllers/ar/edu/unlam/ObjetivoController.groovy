@@ -1,5 +1,7 @@
 package ar.edu.unlam
 
+import org.grails.datastore.mapping.annotation.Id;
+
 
 class ObjetivoController {
 
@@ -20,18 +22,18 @@ class ObjetivoController {
 
 	def VerDetallesObjetivo() {
 		
-		def obj = params.objetivo.toInteger()
+		def objt = params.obj.toLong()
 		
-		def tem = new Paso().findAllWhere(idObjetivo : obj)
+		def tem = new Paso().findAllWhere(idObjetivo : objt)
 		def tmp = new Objetivo().findAll()
-		def tmpobj = new Objetivo().findWhere(idobjetivo:obj)
+		def tmpobj = new Objetivo().findWhere(id : objt)
 		def map = [ tmpp : tem , tmp :tmp , tmpo : tmpobj]
 		render(view:"VerDetallesObjetivo", model:map)
 	}
 	
 	def guardarObjetivo() {
 		
-				def asd = new Objetivo(idobjetivo: 3, titulo: params.tituloObjetivo
+				def asd = new Objetivo( titulo: params.tituloObjetivo
 			,descripcion: params.DescripcionObjetivo ,categoria: "Escribir un libro", idusuario: "Diegarcho"
 				,cantPasos: Integer.parseInt(params.CantPasos), cantDias: 5,estado: "En Progreso").save()
 				

@@ -2,8 +2,7 @@ package ar.edu.unlam
 
 class Paso {
 	
-	Integer idPaso
-	Integer idObjetivo
+	Long idObjetivo
 	String titulo
 	String objetivo
 	Date fechaInicio
@@ -16,5 +15,8 @@ class Paso {
 		objetivo blank:false,size:1..256
 		idObjetivo blank:false
 		estado blank:false
+		fechaInicio nullable:true
+		fechaFin nullable:true
+		fechaRecordatorio nullable:true
     }
 }
