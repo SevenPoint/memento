@@ -12,8 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="css/css.css" rel="stylesheet">
-	<script src="js/valida_fecha.js"></script>
 	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+	<script type="text/javascript" src="js/valida_fecha.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -46,8 +46,7 @@
   	                        <li class="dropdown" action="">
   	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="">Perfil</a></li>
-                                    <li><a href="">Configuracion</a></li>
+                                    <li><a href="home.html">Perfil</a></li>
                                     <li><a href="">Salir</a></li>
   	                            </ul>
   	                        </li>
@@ -70,14 +69,17 @@
                     <li>Descripción</li>
                     <textarea type="text" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese una descripción" ></textarea><br>
                     <li>Fecha de Inicio</li>
-                    <input type="date" name=""  id="input1" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de inicio"><br>
+                    <!--input type="date" name="fecha_in" id="input1" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de inicio"--><br>
+					<input  name="fecha_in" placeholder="Fecha Final" class="form-control" required="required" /><br>
                     <li>Ficha de Fin</li>
-                    <input type="date" name=""  id="input2" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de fin"><br>
-                    <div id="contenedor"></div>
+                    <!--input type="date" name="fecha_fn" id="input2" class="form-control" value="" required="required" title="" placeholder="Ingrese una fecha de fin"-->
+					<input  name="fecha_fn" placeholder="Fecha Final" class="form-control" required="required"/><br>
+					
 					<li>Cantidad de Pasos</li>
                     <input type="number" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese cantidad de pasos" >
                     <br>
                     <input type="submit" value="Siguiente" id="boton">
+					<p class="result"></p>
                 </ul>
 		</form>
         </div>
