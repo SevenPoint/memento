@@ -19,7 +19,7 @@ div.right{float:right;}
 div.left{float:left;}
 div.noactive{background-color:gray;}
 a.link{color:blue;}
-div.row{margin-left:20%;}
+/*div.row{margin-left:20%;}*/
 /* index.html*/
 #titulo{
 margin-left: -20%;
