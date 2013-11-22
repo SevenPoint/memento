@@ -20,8 +20,6 @@
     <!-- Bootstrap core CSS -->
     <link href="path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="css/css.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
-	<script type="text/javascript" src="js/agrega_comentario.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -40,21 +38,21 @@
   	                    <span class="icon-bar"></span>
   	                    <span class="icon-bar"></span>
   	                </button>
-  	                <a class="navbar-brand" href="perfil.html"><b>memento</b></a>
+  	                <a class="navbar-brand" href="index.html"><b>memento</b></a>
   	            </div> 	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
   	            <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav nav-pills">
                           <li><a href="objetivos.html">objetivos</a></li>
                           <!--li><a href="#">logros</a></li-->
-                          <li><a href="amigos.html">amigos</a></li>                     
+                          <li><a href="#">amigos</a></li>                     
   	                    
 						<ul class="nav navbar-nav navbar-right">                        
   	                        <li class="dropdown" action="">
   	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="perfil.html">Perfil</a></li>
-                                 
+                                  
                                     <li><a href="">Salir</a></li>
   	                            </ul>
   	                        </li>
@@ -64,51 +62,70 @@
   		</div>            
   	</nav>
 	<div class="navbarCenter">
-	 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-	
+		<div id="alerta">
 		<div class="well well-sm">
-		<!--img src="images/imagen_perfil.jpg" alt="..." class="img-rounded"--><a href="" style="color:blue;"><h5><b>Ivana</a> dijo:</b></h5>
+			<h4><b>Alertas</b></h4>
 		<br/>
-		<p>Vamos te falta poco!</p>		
+		<div id="contenedor">No tienes ningun alerta por ahora...
 		</div>
-		<div class="well well-sm">
-		<!--img src="images/imagen_perfil.jpg" alt="..." class="img-rounded"--><a href="" style="color:blue;"><h5><b>Diego</a> dijo:</b></h5>
-		<br/>
-		<p>No vas a llegar</p>
 		</div>
-		<div class="well well-sm">
-		<!--img src="images/imagen_perfil.jpg" alt="..." class="img-rounded"--><a href="" style="color:blue;"><h5><b>Marcos</a> dijo:</b></h5>
-		<br/>
-		<p></p>
 		</div>
-		<div class="well well-sm">
-		<!--img src="images/imagen_perfil.jpg" alt="..." class="img-rounded"--><a href="" style="color:blue;"><h5><b>Pablo</a> dijo:</b></h5>
-		<br/>
-		<p></p>
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4><b><span class="glyphicon glyphicon-ok"></span>&nbsp;Objetivos generales</b></h4></div>
+			<br/>
+			<div class="panel-body">
+			<h6>Desde el comienzo</h6>
+			<div class="progress progress-striped">
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+					<span class="sr-only">40% Complete (success)</span>
+				  </div>
+			</div>
+			<h6>En el mes</h6>
+			<div class="progress progress-striped">
+				  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+					<span class="sr-only">20% Complete</span>
+				  </div>
+			</div>
+			</div>
 		</div>
-		<div id="comentario"></div>
-		<br/>
-		<input class="form-control" id="focusedInput" name="comentar" type="text" placeholder="Comentar...">
-		<br/>
-		<button type="button" id="boton1" class="btn btn-primary">Enviar</button>
-		
+		<div class="panel panel-default">
+			<div class="panel-heading"><h4><b><span class="glyphicon glyphicon-ok"></span>&nbsp;Logros alcanzados</b></h4></div>
+			<div class="panel-body">
+			<br/>
+			<h6>Desde el comienzo</h6>
+			<div class="progress progress-striped">
+			  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				<span class="sr-only">60% Complete (warning)</span>
+			  </div>
+			</div>
+			<h6>En el mes</h6>
+			<div class="progress progress-striped">
+			  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				<span class="sr-only">80% Complete (danger)</span>
+			  </div>
+			</div>
+			</div>
+		</div>
 	</div>
-	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-	<ul class="nav nav-pills nav-stacked">
-	<div class="panel panel-default">
+    <!--div class="navbarCenter">
+      <div class="row">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="panel panel-default">
                 <div class="panel-body">
-                   Amigos
+                    Objetivos
                 </div>
-    </div>
-          <li class="active"><a href=""> Ivana Leikin </a></li>
-          <li class="active"><a href=""> Diego Chieffo </a></li>
-		  <li class="active"><a href=""> Marcos Villareal</a></li>
-		 
-    </ul>
-	</div>
-		
-	</div>
-    
+            </div>
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="">Escribir un Libro</a></li>
+                  <li><a href="">Hacer barcos de papel</a></li>
+                </ul>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        
+        </div>
+      </div>
+    </div-->
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
