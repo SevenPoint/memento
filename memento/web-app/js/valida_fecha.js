@@ -10,8 +10,9 @@ $(document).ready(function() {
             oDateIn = new Date(aFecIn[2], aFecIn[1], aFecIn[0]),
             oDateFn = new Date(aFecFn[2], aFecFn[1], aFecFn[0]);
         if (oDateIn.getTime() > oDateFn.getTime())
+			/*$("#result").text('<p>La fecha de inicio debe ser menor a la de fin</p>');*/
 			return false;
-			//$('p.result').text('La fecha de inicio debe ser menor a la de fin');*/
+			
 		else
 		return true;
 
