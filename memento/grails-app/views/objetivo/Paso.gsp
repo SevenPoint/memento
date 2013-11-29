@@ -88,7 +88,7 @@
 			
 			
 			<br>
-	                    <input type="submit" value="Finalizar" id="boton"></input>
+	                    <input type="submit" value="Finalizar" id="boton" class="btn btn-primary"></input>
         </form>
         
 		</div>
