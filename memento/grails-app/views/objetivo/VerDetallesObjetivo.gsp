@@ -92,23 +92,27 @@
              <g:each var="paso" in="${tmpp}">
              	<g:if test="${paso.estado == "1"}">
                <div class="panel panel-success">
-					<div class="panel-heading">
+				  <div class="panel-heading">
 	                <h3 class="panel-title">${paso.titulo}  <span class="glyphicon glyphicon-ok"></span> </h3>
 	              </div>
 	              <div class="panel-body">
-	              ${paso.estado}
+	              	${paso.objetivo}
 	              </div>
 	           </div>
 	           </g:if>
 	           <g:else>
-	           	<div class="panel panel-warning">
-					<div class="panel-heading">
-	                <h3 class="panel-title">${paso.titulo}  <span class="glyphicon glyphicon-dashboard"></span> </h3>
-	              </div>
-	              <div class="panel-body">
-	              ${paso.estado}
-	              </div>
-	            </div>
+	            <form action="../objetivo/finalizarPaso" method="POST">
+	            	<input type="hidden" name="idO" value="${paso.id}">
+		           	<div class="panel panel-warning">
+						<div class="panel-heading">
+		                <h3 class="panel-title">${paso.titulo}  <span class="glyphicon glyphicon-dashboard"></span> </h3>
+		              </div>
+		              <div class="panel-body">
+		              ${paso.objetivo}
+		              </div>
+		              <input type="submit" value="Finalizar" id="boton" class="btn btn-primary"></input>
+		            </div>
+	            </form>
 	           </g:else>
 	           <br>   
 	           

@@ -68,13 +68,15 @@
                     <li>Descripción</li>
                     <textarea type="text" name="DescripcionObjetivo" id="input" class="form-control" value="" required="required" title="" ></textarea><br>
                     <li>Fecha de Inicio</li>
-                    <input type="date" name="FechaInicio" id="input" class="form-control" value="" required="required" title=""><br>
-                    <li>Ficha de Fin</li>
-                    <input type="date" name="FechaFin" id="input" class="form-control" value="" required="required" title=""><br>
+                    <!--<input type="date" name="FechaInicio" id="input" class="form-control" value="" required="required" title=""><br>-->
+					<input  name="fecha_in" placeholder="Fecha Inicio" class="form-control" required="required" /><br>
+                    <li>Fecha de Fin</li>
+                    <!--<input type="date" name="FechaFin" id="input" class="form-control" value="" required="required" title=""><br>-->
+					<input  name="fecha_fn" placeholder="Fecha Final" class="form-control" required="required"/><br>
                     <li>Cantidad de Pasos</li>
                     <input type="number" name="CantPasos" id="input" class="form-control" value="" required="required" title="" >
                     <br>
-                    <input type="submit" value="Siguiente">
+                    <input type="submit" value="Siguiente" class="btn btn-primary">
                 </ul>
 		</form>
         </div>

@@ -47,7 +47,24 @@ class ObjetivoController {
 	def guardarPaso() {
 		
 				def asd = new Paso(idObjetivo: params.idO, titulo: params.tituloPaso
-			,objetivo: "objetivoDuro" ,estado: "EstadoDuranga").save()
+			,objetivo: params.descripcionPaso ,estado: "2").save()
+				
+				def tmp = new Objetivo().findAll()
+				
+				 def map = [ tmp : tmp ]
+				 
+				render(view:"objetivo", model:map)
+	}
+	
+	def finalizarPaso() {
+		
+		def idPaso = params.idO.toLong()
+			
+		def paso = new Paso().findWhere(id : idPaso)
+		paso.estado = '1'
+		paso.save()
+		
+				
 				
 				def tmp = new Objetivo().findAll()
 				
