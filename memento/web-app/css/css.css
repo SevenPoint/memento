@@ -19,6 +19,8 @@ div.right{float:right;}
 div.left{float:left;}
 div.noactive{background-color:gray;}
 a.link{color:blue;}
+#boton2{float:right;}
+p.amigos{color:blue;}
 /*div.row{margin-left:20%;}*/
 /* index.html*/
 #titulo{
