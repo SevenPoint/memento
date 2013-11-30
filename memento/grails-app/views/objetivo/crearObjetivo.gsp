@@ -12,6 +12,8 @@
     <!-- Bootstrap core CSS -->
     <link href="../path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="../css/css.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
+	<script type="text/javascript" src="js/valida_fecha.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -73,16 +75,15 @@
                     <li>Fecha de Fin</li>
                     <!--<input type="date" name="FechaFin" id="input" class="form-control" value="" required="required" title=""><br>-->
 					<input  name="fecha_fn" placeholder="Fecha Final" class="form-control" required="required"/><br>
-                    <li>Cantidad de Pasos</li>
-                    <input type="number" name="CantPasos" id="input" class="form-control" value="" required="required" title="" >
+					
+					<li>Cantidad de Pasos</li>
+                    <input type="number" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese cantidad de pasos" >
                     <br>
                     <input type="submit" value="Siguiente" class="btn btn-primary">
                 </ul>
 		</form>
         </div>
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-        
-        </div>
+       
       </div>
     </div>
     <br><br><br>
