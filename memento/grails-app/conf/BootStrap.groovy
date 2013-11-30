@@ -1,5 +1,7 @@
 import ar.edu.unlam.Objetivo
 import ar.edu.unlam.Paso
+import ar.edu.unlam.Usuario
+import ar.edu.unlam.SecUsuario
 
 class BootStrap {
 	
@@ -25,7 +27,18 @@ class BootStrap {
 		new Objetivo( titulo: "Correr 40KM"
 			,descripcion: "Correr 40KM" ,categoria: "Correr 40KM", idusuario: "Diegarcho"
 				,cantPasos: 5, cantDias: 5,estado: "En Progreso").save()
+
+		new Objetivo( titulo: "Leer Un ALgO"
+			,descripcion: "Leer Un ALgoooooo" ,categoria: "Leer Un Libro", idusuario: "Ezequiel"
+				,cantPasos: 5, cantDias: 5,estado: "En Progreso").save()
+						
+		new Objetivo( titulo: "Leer Un ALgoooooo2"
+			,descripcion: "Leer Un Libro" ,categoria: "Leer Un Libro", idusuario: "Ezequiel"
+				,cantPasos: 5, cantDias: 5,estado: "En Progreso").save()
 				
+		new Usuario(idUsuario:'Ezequiel',nombre:'eze',apellido:'af',edad:24,sexo:'M',email:'eze.af@gmail.com').save()
+		
+		new SecUsuario(nombre:'Ezequiel',apellido:'Falleau',edad:22,sexo:'m',email:'ezequiel.falleau@gmail.com',username:'ezeaf',password:'eze',enabled:true,accountExpired:false,accountLocked:false,passwordExpired:false).save()
 		new Paso(idObjetivo: 1, titulo: "Pasos 1", objetivo: "Leer 50 páginas", estado: 1).save()
 		
 		new Paso(idObjetivo: 1, titulo: "Pasos 2", objetivo: "Leer 50 páginas", estado: 1).save()
