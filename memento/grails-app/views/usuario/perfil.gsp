@@ -7,13 +7,11 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="path/assets/ico/favicon.png">
 
-    <title>Crear Objetivo</title>
+    <title>Objetivos - Memento</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="../css/css.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
-	<script type="text/javascript" src="js/valida_fecha.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -32,7 +30,7 @@
   	                    <span class="icon-bar"></span>
   	                    <span class="icon-bar"></span>
   	                </button>
-  	                <a class="navbar-brand" href="#">memento</a>
+  	                <a class="navbar-brand" href="perfil.html">memento</a>
   	            </div>
   	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,8 +44,8 @@
   	                        <li class="dropdown" action="">
   	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="">Perfil</a></li>
-                                    <li><a href="">Configuracion</a></li>
+                                    <li><a href="perfil.html">Perfil</a></li>
+                                    
                                     <li><a href="">Salir</a></li>
   	                            </ul>
   	                        </li>
@@ -56,37 +54,82 @@
   	                </div><!-- /.navbar-collapse -->
   		</div>            
   	</nav>
+	 <div class="row">
     <div class="navbarCenter">
-      <div class="row">
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-
-		<h2><span class="glyphicon glyphicon-dashboard"></span> Objetivo a crear</h2>
-                  <br>
-                   
-                <form action="../objetivo/guardarObjetivo" method="POST">
-                <ul class="nav nav-pills nav-stacked">
-                    <li>Titulo</li>
-                    <input type="text" name="tituloObjetivo" id="input" class="form-control" value="" required="required" title="" ><br>
-                    <li>Descripción</li>
-                    <textarea type="text" name="DescripcionObjetivo" id="input" class="form-control" value="" required="required" title="" ></textarea><br>
-                    <li>Fecha de Inicio</li>
-                    <!--<input type="date" name="FechaInicio" id="input" class="form-control" value="" required="required" title=""><br>-->
-					<input  name="fecha_in" placeholder="Fecha Inicio" class="form-control" required="required" /><br>
-                    <li>Fecha de Fin</li>
-                    <!--<input type="date" name="FechaFin" id="input" class="form-control" value="" required="required" title=""><br>-->
-					<input  name="fecha_fn" placeholder="Fecha Final" class="form-control" required="required"/><br>
+	        <div class="col-xs-12 col-md-8">
+			
+<div class="page-header">
+  <ul class="nav nav-pills nav-stacked">
+          
+					    <li class="active">
+					    
+			<span class="glyphicon glyphicon-dashboard"></span> ${utmp.apellido} </li>
 					
-					<li>Cantidad de Pasos</li>
-                    <input type="number" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese cantidad de pasos" >
-                    <br>
-                    <input type="submit" value="Siguiente" class="btn btn-primary">
-                </ul>
-		</form>
+					</ul>
+  </div>
+  <button type="button" class="btn btn-info">Agregar como amigo</button>
+
+  <h1><small>Logros alcanzados</small></h1>
+
+
+      
+	  <div class="panel panel-default">
+			<div class="panel-heading"><h4><b><span class="glyphicon glyphicon-ok"></span>&nbsp;Objetivos generales</b></h4></div>
+			<br/>
+			<div class="panel-body">
+			<h6>Desde el comienzo</h6>
+			<div class="progress progress-striped">
+				  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+					<span class="sr-only">40% Complete (success)</span>
+				  </div>
+			</div>
+			<h6>En el mes</h6>
+			<div class="progress progress-striped">
+				  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+					<span class="sr-only">20% Complete</span>
+				  </div>
+			</div>
+			</div>
+		</div>
+			<div class="panel panel-default">
+			<div class="panel-heading"><h4><b><span class="glyphicon glyphicon-ok"></span>&nbsp;Logros alcanzados</b></h4></div>
+			<div class="panel-body">
+			<br/>
+			<h6>Desde el comienzo</h6>
+			<div class="progress progress-striped">
+			  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				<span class="sr-only">60% Complete (warning)</span>
+			  </div>
+			</div>
+			<h6>En el mes</h6>
+			<div class="progress progress-striped">
+			  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+				<span class="sr-only">80% Complete (danger)</span>
+			  </div>
+			</div>
+			</div>
+		</div>
+	  	</div>
+     
+        <div class="col-xs-6 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Objetivos actuales
+                </div>
+            </div>
+                <ul class="nav nav-pills nav-stacked">
+          <g:each var="obj" in="${tmp}">
+					    <li class="active">
+					    <g:link action="VerDetallesObjetivo" params="[obj:obj.id]">
+			<span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </g:link></li>
+					</g:each>
+          
+           </ul>
+		 
         </div>
-       
-      </div>
-    </div>
-    <br><br><br>
+		</div>
+</div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
