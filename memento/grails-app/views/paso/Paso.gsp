@@ -7,13 +7,11 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="path/assets/ico/favicon.png">
 
-    <title>Crear Objetivo</title>
+    <title>Configuracion de Pasos</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../path/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="../css/css.css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery-1.6.4.js"></script>
-	<script type="text/javascript" src="js/valida_fecha.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="path/assets/js/html5shiv.js"></script>
@@ -59,31 +57,51 @@
     <div class="navbarCenter">
       <div class="row">
         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-
-		<h2><span class="glyphicon glyphicon-dashboard"></span> Objetivo a crear</h2>
-                  <br>
-                   
-                <form action="../objetivo/guardarObjetivo" method="POST">
-                <ul class="nav nav-pills nav-stacked">
-                    <li>Titulo</li>
-                    <input type="text" name="tituloObjetivo" id="input" class="form-control" value="" required="required" title="" ><br>
-                    <li>Descripción</li>
-                    <textarea type="text" name="DescripcionObjetivo" id="input" class="form-control" value="" required="required" title="" ></textarea><br>
-                    <li>Fecha de Inicio</li>
-                    <!--<input type="date" name="FechaInicio" id="input" class="form-control" value="" required="required" title=""><br>-->
-					<input  name="fecha_in" placeholder="Fecha Inicio" class="form-control" required="required" /><br>
-                    
-					<li>Cantidad de Pasos</li>
-                    <input type="number" name="CantPasos" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese cantidad de pasos" >
-                    <br>
-                    <input type="submit" value="Siguiente" class="btn btn-primary">
-                </ul>
-		</form>
+            
+                <h2>Configurando</h2>   
+                
+		<h3>Primer paso</h3>
+		
+		<form action="../objetivo/guardarPaso" method="POST">
+				   <ul class="nav nav-pills nav-stacked">
+	                    <li>Titulo</li>
+	                    <input type="text" name="tituloPaso" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese un título" ><br>
+	                    <li>Descripcion</li>
+	                    <textarea  type="text" name="descripcionPaso" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese una descripción" ></textarea><br>
+	                    <li>Recordarme este paso</li>
+	                    <input type="hidden" name="idO" value="${tmp.id}">
+	                    <input type="hidden" name="cantPasos" value="${tmp.cantPasos}">
+	                    <input type="hidden" name="cantDias" value="${tmp.cantDias}">
+	                    <input type="hidden" name="fechain" value="${fechain}">
+	                    fechain
+			    <div class="row">
+			      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				<input type="number" name="" id="input" class="form-control" value="" required="required" title="" >
+			      </div>
+			      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+				  <select style="width:140px;" name="tiempoAtras" class="form-control">
+				    <option selected>Horas antes</option>
+				    <option>Días antes</option>
+				  </select>
+			      </div>
+			    </div>
+	                    
+			    
+	                </ul>
+				
+			
+			
+			<br>
+	                    <input type="submit" value="Finalizar" id="boton" class="btn btn-primary"></input>
+        </form>
+        
+		</div>
+		
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        
         </div>
-       
       </div>
     </div>
-    <br><br><br>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
