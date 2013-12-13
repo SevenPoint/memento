@@ -30,14 +30,14 @@
   	                    <span class="icon-bar"></span>
   	                    <span class="icon-bar"></span>
   	                </button>
-  	                <a class="navbar-brand" href="perfil.html">memento</a>
+  	                <a class="navbar-brand" href="../objetivo/index">memento</a>
   	            </div>
   	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
   	            <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav nav-pills">
-                          <li><a href="objetivos.html">objetivos</a></li>
-                          <!--li><a href="#">logros</a></li-->
+                           <li><a href="../objetivo/index">objetivos</a></li>
+                          <li><a href="#">logros</a></li>
                           <li><a href="amigos.html">amigos</a></li>                     
   	                    
 						<ul class="nav navbar-nav navbar-right">                        
@@ -59,13 +59,14 @@
 	        <div class="col-xs-12 col-md-8">
 			
 <div class="page-header">
-  <ul class="nav nav-pills nav-stacked">
-          
+  <h1><ul class="nav nav-pills nav-stacked">
+                	<g:each var="usuario" in="${utmp}">
 					    <li class="active">
 					    
-			<span class="glyphicon glyphicon-dashboard"></span> ${utmp.apellido} </li>
-					
-					</ul>
+			<span class="glyphicon glyphicon-dashboard"></span> ${usuario.nombre} </li>
+					</g:each>
+                  
+                </ul> </h1>
   </div>
   <button type="button" class="btn btn-info">Agregar como amigo</button>
 
@@ -117,15 +118,22 @@
                     Objetivos actuales
                 </div>
             </div>
-                <ul class="nav nav-pills nav-stacked">
-          <g:each var="obj" in="${tmp}">
+                <!--  <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href=""><span class="glyphicon glyphicon-ok"></span> Escribir un Libro </a></li>
+           <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> Hacer barcos de papel </a></li>
+		  <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> Construir cajitas</a></li>
+		  <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> Bajar de peso </a></li>
+		  <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> Pintar mi casa</a></li>
+                </ul>-->
+		 
+		             <ul class="nav nav-pills nav-stacked">
+                	<g:each var="obj" in="${tmp}">
 					    <li class="active">
 					    <g:link action="VerDetallesObjetivo" params="[obj:obj.id]">
 			<span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </g:link></li>
 					</g:each>
-          
-           </ul>
-		 
+                  
+                </ul>
         </div>
 		</div>
 </div>
