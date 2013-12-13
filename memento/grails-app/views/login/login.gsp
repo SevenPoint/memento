@@ -68,11 +68,11 @@
 				  	        	</div>									
 							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 							    <ul class="nav navbar-nav navbar-right">
-							    	<form class="registrarIndex navbar-right">
-										<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="" placeHolder="Ingrese su nombre">
-										<input type="email" name="" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese su E-mail">
-										<input type="password" name="" id="input" class="form-control" required="required" title="" placeholder="Ingrese un clave">
-										<input type="password" name="" id="input" class="form-control" required="required" title="" placeholder="Reingrese la clave">
+							    	<form class="registrarIndex navbar-right" action="../usuario/guardarUsuario" method="POST">
+										<input type="text" name="Nombre" id="input" class="form-control" value="" required="required"  title="" placeHolder="Ingrese su nombre">
+										<input type="email" name="email" id="input" class="form-control" value="" required="required" title="" placeholder="Ingrese su E-mail">
+										<input type="password" name="password" id="input" class="form-control" required="required" title="" placeholder="Ingrese un clave">
+										<input type="password" name="repPassword" id="input" class="form-control" required="required" title="" placeholder="Reingrese la clave">
 										<button type="submit" class="btn btn-primary">Registrarse</button>
 									</form>
 			  	                </ul>

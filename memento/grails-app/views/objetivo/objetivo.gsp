@@ -30,19 +30,19 @@
   	                    <span class="icon-bar"></span>
   	                    <span class="icon-bar"></span>
   	                </button>
-  	                <a class="navbar-brand" href="home.html">memento</a>
+  	                <a class="navbar-brand" href="../objetivo/index">memento</a>
   	            </div>
   	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
   	            <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav nav-pills">
-                          <li><a href="objetivos.html">objetivos</a></li>
-                          <!--li><a href="#">logros</a></li-->
-                          <li><a href="amigos.html">amigos</a></li>                     
+                         <li><a href="../objetivo/index">objetivos</a></li>
+                          <li><a href="#">logros</a></li>
+                          <li><a href="amigos.html">amigos</a></li>                    
   	                    
 						<ul class="nav navbar-nav navbar-right">                        
   	                        <li class="dropdown" action="">
-  	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
+  	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">${usuario}<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="">Perfil</a></li>
                                     <li><a href="">Configuracion</a></li>

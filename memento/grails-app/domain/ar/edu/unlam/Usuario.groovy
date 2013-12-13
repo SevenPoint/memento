@@ -1,6 +1,6 @@
 package ar.edu.unlam
 
-class Usuario {
+class Usuario extends SecUsuario{
 
 	String idUsuario
 	String nombre

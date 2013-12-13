@@ -30,6 +30,7 @@ class LoginController {
 	def index = {
 		if (springSecurityService.isLoggedIn()) {
 			redirect uri: SpringSecurityUtils.securityConfig.successHandler.defaultTargetUrl
+			//render view: 'objetivo/index'
 		}
 		else {
 			redirect action: 'auth', params: params
@@ -45,15 +46,21 @@ class LoginController {
 
 		if (springSecurityService.isLoggedIn()) {
 			redirect uri: config.successHandler.defaultTargetUrl
+			//render view: 'objetivo/index'
 			return
 		}
 
-		String view = 'login'//'auth'
-		String postUrl = "../objetivo/index"//"${request.contextPath}${config.apf.filterProcessesUrl}"
+		String view = 'login'
+		String postUrl = "${request.contextPath}${config.apf.filterProcessesUrl}"
 		render view: view, model: [postUrl: postUrl,
 		                           rememberMeParameter: config.rememberMe.parameter]
 	}
 
+	def home={
+		render view: 'objetivo/objetivo'
+		
+	}
+	
 	/**
 	 * The redirect action for Ajax requests.
 	 */
