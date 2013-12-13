@@ -30,18 +30,20 @@
   	                    <span class="icon-bar"></span>
   	                    <span class="icon-bar"></span>
   	                </button>
-  	                <a class="navbar-brand" href="home.html">memento</a>
+  	                <a class="navbar-brand" href="../objetivo/index">memento</a>
   	            </div>
   	
   	            <!-- Collect the nav links, forms, and other content for toggling -->
   	            <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-                          <li class="active"><a href="objetivos.html">objetivos</a></li>
+                          <li><a href="../objetivo/index">objetivos</a></li>
+                          <li><a href="#">logros</a></li>
+                          <li><a href="amigos.html">amigos</a></li> 
                         </ul>
   	                    <ul class="nav navbar-nav navbar-right">
   	                        
   	                        <li class="dropdown" action="">
-  	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">NombreUsuario <b class="caret"></b></a>
+  	                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">${usuario} <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="">Perfil</a></li>
                                     <li><a href="">Configuracion</a></li>
@@ -62,7 +64,9 @@
             </div>
                 <ul class="nav nav-pills nav-stacked">
                 	<g:each var="obj" in="${tmp}">
-					    <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </a></li>
+					    <li class="active">
+					    <g:link action="VerDetallesObjetivo" params="[obj:obj.id]">
+			<span class="glyphicon glyphicon-dashboard"></span> ${obj.titulo} </g:link></li>
 					</g:each>
                   
                 </ul>
@@ -70,6 +74,22 @@
                     <a href="../objetivo/crearObjetivo"> <span class="glyphicon glyphicon-plus"></span> Agregar un objetivo nuevo</a>
                 </div>
         </div>
+                 
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Consejo
+                </div>
+            </div>
+                <ul class="nav nav-pills nav-stacked">
+                	<g:each var="con" in="${conj}">
+					    <li class="active"><a href=""><span class="glyphicon glyphicon-dashboard"></span> ${con.consejo} </a></li>
+					</g:each>
+                  
+                </ul>
+        </div>        
+                 
+        
         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
 	  <g:each var="objt" in="${tmpo}">
 	  <div class="panel panel-default">
@@ -92,7 +112,7 @@
              <g:each var="paso" in="${tmpp}">
              	<g:if test="${paso.estado == "1"}">
                <div class="panel panel-success">
-				  <div class="panel-heading">
+					<div class="panel-heading">
 	                <h3 class="panel-title">${paso.titulo}  <span class="glyphicon glyphicon-ok"></span> </h3>
 	              </div>
 	              <div class="panel-body">
@@ -100,7 +120,7 @@
 	              </div>
 	           </div>
 	           </g:if>
-	           <g:else>
+	           <g:elseif test="${paso.estado == "2"}">
 	            <form action="../objetivo/finalizarPaso" method="POST">
 	            	<input type="hidden" name="idO" value="${paso.id}">
 		           	<div class="panel panel-warning">
@@ -113,6 +133,16 @@
 		              <input type="submit" value="Finalizar" id="boton" class="btn btn-primary"></input>
 		            </div>
 	            </form>
+	           </g:elseif>
+	      		<g:else>
+	      		<div class="panel panel-danger">
+				  <div class="panel-heading">
+	                <h3 class="panel-title">${paso.titulo}  <span class="glyphicon glyphicon-remove"></span> </h3>
+	              </div>
+	              <div class="panel-body">
+	              	${paso.objetivo}
+	              </div>
+	            </div>
 	           </g:else>
 	           <br>   
 	           
