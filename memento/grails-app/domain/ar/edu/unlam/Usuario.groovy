@@ -12,7 +12,7 @@ class Usuario extends SecUsuario{
     static constraints = {
 		nombre blank:false, nullable: false
 		apellido blank:false, nullable: false
-        edad min:18, max:90
+		edad min:18, max:90
 		sexo blank:false
 		email blank:false
     }
